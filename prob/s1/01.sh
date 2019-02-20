@@ -1,8 +1,15 @@
 #!/bin/bash
 
-if [ $# -ne 1 -a -f $1 ]
+if [ $# -ne 1 ]
 then
-    echo "Wrong number of arguments... :("
+    echo "Wrong number of arguments."
+    echo "   Usage: $ bash me.sh file"
+    exit 1
+fi
+
+if [ -d $1 ]
+then
+    echo "You passed a directory as argument."
     echo "   Usage: $ bash me.sh file"
     exit 1
 fi
