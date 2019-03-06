@@ -2,7 +2,7 @@
 
 if [ $# -ne 1 ]
 then
-    echo "Wrong number of arguments."
+    echo "Error: Wrong number of arguments."
     exit 1
 fi
 

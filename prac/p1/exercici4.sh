@@ -2,18 +2,18 @@
 
 if [ $# -ne 2 ]
 then
-    echo "Wrong number of arguments."
+    echo "Error: Wrong number of arguments."
     exit 1
 fi
 
 if [ ! -d $1 ]
 then
-    echo "First argument should be a directory."
+    echo "Error: First argument should be a directory."
     exit 1
 fi
 
 # L'argument -S ordena per mida decreixent
-# d'aquesta manera el for posterior és més eficient
+# d'aquesta manera el for posterior ès més eficient
 dump=$(ls -S $1)
 min=$2
 boo=0

@@ -2,13 +2,13 @@
 
 if [ $# -ne 1 ]
 then
-    echo "Wrong number of arguments."
+    echo "Error: Wrong number of arguments."
     exit 1
 fi
 
 if [ ! -d $1 ]
 then
-    echo "The argument should be a directory."
+    echo "Error: The argument should be a directory."
     exit 1
 fi
 
