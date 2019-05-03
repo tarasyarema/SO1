@@ -33,8 +33,9 @@ int get_data(Data *data, FILE *file, int max) {
     if (ftell(file) == 0)
         fgets(line, sizeof(line), file);
 
+
     pos = 0;
-    while (pos < max && fgets(line, sizeof(line), file)) {
+    while (pos < max && fgets(line, sizeof(line), file) != NULL) {
         temp = get_column_int(line, 8);
         data->passenger_count[pos] = temp;
         temp = get_column_int(line, 9);

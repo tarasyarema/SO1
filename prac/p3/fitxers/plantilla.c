@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 
 struct data {
     int *passenger_count;
@@ -25,7 +26,7 @@ int main(int argc, char *argv[])
 
     char *filename = argv[1];
 
-    num_elements_block = 100000;
+    num_elements_block = INT_MAX;
     passenger_count = 0;
     trip_time_in_secs = 0;
 
